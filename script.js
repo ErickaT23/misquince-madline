@@ -1,20 +1,24 @@
 // Función para abrir la invitación (sobre) y reproducir la música
 function abrirInvitacion() {
-    // Obtener el sobre y la invitación
-    const envelope = document.getElementById('envelope');
-    const invitacion = document.getElementById('invitacion');
-    
-    // Añadir clase para animar la apertura del sobre
-    envelope.classList.add('open');
+  // Obtener el sobre y la invitación
+  const envelope = document.getElementById('envelope');
+  const invitacion = document.getElementById('invitacion');
+  
+  // Añadir clase para animar la apertura del sobre
+  envelope.classList.add('open');
 
-    // Mostrar la invitación después de la animación
-    setTimeout(() => {
-        envelope.style.display = 'none';
-        invitacion.style.display = 'block';
-
-    }, 1000); // Ajustar tiempo para esperar la animación de apertura del sobre
+  // Mostrar la invitación después de la animación
+  setTimeout(() => {
+      envelope.style.display = 'none';
+      invitacion.style.display = 'block';
+      
+      // Reproducir la música solo después de abrir el sobre
+      const musica = document.getElementById('musica');
+      if (musica) {
+          musica.play();
+      }
+  }, 1000); // Ajustar tiempo para esperar la animación de apertura del sobre
 }
-
 // Asignar el evento de clic al sello para abrir el sobre
 document.addEventListener('DOMContentLoaded', function() {
     const seal = document.getElementById('seal');
@@ -163,7 +167,7 @@ function elegirAplicacionOtraDireccion() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Enviar mensaje
+  // --- Listener para enviar deseo ---
   document.getElementById('submit-wish').addEventListener('click', function () {
     const nombre = document.getElementById('wish-name').value.trim();
     const mensaje = document.getElementById('wish-message').value.trim();
@@ -184,6 +188,38 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Hubo un problema al enviar tu mensaje.');
       });
   });
+
+  // --- Listener para mostrar/ocultar deseos ---
+  document.getElementById('toggle-wishes-btn').addEventListener('click', function () {
+    const btn = this;
+    const wishesDiv = document.getElementById('wishes-container');
+
+    if (wishesDiv.classList.contains('visible')) {
+      wishesDiv.classList.remove('visible');
+      wishesDiv.classList.add('hidden');
+      btn.textContent = 'Leer los deseos';
+      return;
+    }
+
+    if (wishesDiv.dataset.loaded === 'true') {
+      wishesDiv.classList.remove('hidden');
+      wishesDiv.classList.add('visible');
+      btn.textContent = 'Ocultar deseos';
+      return;
+    }
+
+    // Si aún no ha cargado, traer los datos desde Firebase
+    btn.disabled = true;
+    btn.textContent = 'Cargando...';
+
+    window.toggleWishes();
+
+    setTimeout(() => {
+      btn.textContent = 'Ocultar deseos';
+      btn.disabled = false;
+    }, 500);
+  });
 });
+
 
   

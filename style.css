@@ -1,5 +1,5 @@
 :root {
-    --color-1: #7c3aed;
+    --color-1: #a78bfa;
     --color-2: #a78bfa;
     --font-text: "cormorant garamond", serif;
     --font-title: "Imperial Script", cursive;
@@ -279,6 +279,9 @@ margin: 0;
     border-radius: 10px;
     background-color: #ffffff91;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* si deseas centrar contenido interno */
 }
 .section-calendar a {
     text-decoration: none;
@@ -479,7 +482,7 @@ margin: 0;
 }
 .section-guest h2 {
     display: block;                  /* ocupa toda la fila */
-    background-color: #b38fcc;       /* lila muy claro */
+    background-color: #a491dcac;       /* lila muy claro */
     color: white;                  /* morado fuerte para contraste */
     padding: 20px 20px;
     font-family: var(--font-title);
@@ -489,7 +492,7 @@ margin: 0;
 }
 .section-guest h3 {
     display: block;                  /* ocupa toda la fila */
-    background-color: #d0b2e5;       /* lila muy claro */
+    background-color: #a595d7;       /* lila muy claro */
     color: white;                  /* morado fuerte para contraste */
     padding: 20px 20px;
     font-family: var(--font-title);
@@ -825,5 +828,12 @@ footer {
     -webkit-background-clip: text;
     color: transparent;
     margin: -6px 0 8px;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
   }
   

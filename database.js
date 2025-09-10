@@ -22,35 +22,45 @@ window.guardarDeseo = function(nombre, mensaje) {
   });
 };
 
-window.toggleWishes = function() {
+window.toggleWishes = function () {
   const wishesDiv = document.getElementById('wishes-container');
+  const dbRef = ref(db, 'buenos-deseos/');
 
+  // Si ya está visible, lo ocultamos
   if (wishesDiv.classList.contains('visible')) {
     wishesDiv.classList.remove('visible');
     wishesDiv.classList.add('hidden');
     return;
   }
 
+  // Si ya fue cargado, solo mostrar
   if (wishesDiv.dataset.loaded === 'true') {
     wishesDiv.classList.remove('hidden');
     wishesDiv.classList.add('visible');
     return;
   }
 
-  onValue(ref(db, 'buenos-deseos/'), (snapshot) => {
-    requestIdleCallback(() => {
-      wishesDiv.innerHTML = '';
+  // Cargar desde Firebase
+  onValue(dbRef, (snapshot) => {
+    wishesDiv.innerHTML = ''; // Limpiar antes de agregar
+    let count = 0;
 
-      snapshot.forEach((childSnapshot) => {
-        const wish = childSnapshot.val();
-        const wishElement = document.createElement('p');
-        wishElement.innerHTML = `<strong>${wish.nombre}:</strong> ${wish.mensaje}`;
-        wishesDiv.appendChild(wishElement);
-      });
+    snapshot.forEach((childSnapshot) => {
+      const wish = childSnapshot.val();
+      if (!wish.nombre || !wish.mensaje) return;
 
-      wishesDiv.dataset.loaded = 'true';
-      wishesDiv.classList.remove('hidden');
-      wishesDiv.classList.add('visible');
+      const p = document.createElement('p');
+      p.innerHTML = `<strong>${wish.nombre}:</strong> ${wish.mensaje}`;
+      wishesDiv.appendChild(p);
+      count++;
     });
-  });
+
+    if (count === 0) {
+      wishesDiv.innerHTML = '<p style="text-align:center;">Aún no hay deseos enviados 💌</p>';
+    }
+
+    wishesDiv.dataset.loaded = 'true';
+    wishesDiv.classList.remove('hidden');
+    wishesDiv.classList.add('visible');
+  }, { onlyOnce: true });
 };
