@@ -221,5 +221,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
   
+const twinlkes = document.getElementById("twinles");
+
+for (let i = 0; i < 25; i++) { // 25 destellos
+  let s = document.createElement("div");
+  s.classList.add("sparkle");
+  s.style.top = Math.random() * 100 + "vh";
+  s.style.left = Math.random() * 100 + "vw";
+  s.style.animationDelay = Math.random() * 5 + "s";
+  twinkles.appendChild(s);
+}
+

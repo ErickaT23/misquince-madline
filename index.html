@@ -11,7 +11,6 @@
     <meta property="og:image" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="preload" href="/imagenes/flower-6.png" as="image">
      <!-- Preconnect and Load Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,22 +30,51 @@
     </div>
     <!-- Contenido de la Invitación -->
     <div id="invitacion">
-        <!-- Portada con foto y texto encima -->
-        <!--Header con sintillo-->
-        <header class="sintillo">
-        </header>
-        <div class="section-title fade-in-element">
-            <h1>Mis Quince</h1>
-            <h2>Madeline Sofia</h2>
-            <h3>Cividániz Méndez</h3>
+        <div id="twinkles"><div class="twinkle" style="left: 317.339px; top: 18.5642px; width: 13.0306px; height: 13.0306px; animation-duration: 3.77637s; animation-delay: 0.546396s;"></div><div class="twinkle" style="left: 211.768px; top: 184.148px; width: 14.0839px; height: 14.0839px; animation-duration: 2.86045s; animation-delay: 0.969496s;"></div><div class="twinkle" style="left: 306.328px; top: 156.251px; width: 16.253px; height: 16.253px; animation-duration: 3.54091s; animation-delay: 0.50471s;"></div><div class="twinkle" style="left: 60.5383px; top: 464.618px; width: 16.9799px; height: 16.9799px; animation-duration: 3.84139s; animation-delay: 0.848843s;"></div><div class="twinkle" style="left: 73.1119px; top: 433.545px; width: 12.0519px; height: 12.0519px; animation-duration: 3.3741s; animation-delay: 0.476365s;"></div><div class="twinkle" style="left: 152.987px; top: 186.002px; width: 19.242px; height: 19.242px; animation-duration: 2.32731s; animation-delay: 0.995751s;"></div><div class="twinkle" style="left: 311.502px; top: 483.738px; width: 19.7875px; height: 19.7875px; animation-duration: 2.79842s; animation-delay: 0.695282s;"></div><div class="twinkle" style="left: 278.505px; top: 109.174px; width: 17.5254px; height: 17.5254px; animation-duration: 3.19471s; animation-delay: 0.380875s;"></div><div class="twinkle" style="left: 217.997px; top: 578.743px; width: 15.5552px; height: 15.5552px; animation-duration: 2.54702s; animation-delay: 0.928746s;"></div><div class="twinkle" style="left: 42.1154px; top: 429.249px; width: 11.2389px; height: 11.2389px; animation-duration: 3.66742s; animation-delay: 0.856371s;"></div><div class="twinkle" style="left: 275.473px; top: 737.297px; width: 13.239px; height: 13.239px; animation-duration: 2.9095s; animation-delay: 0.979121s;"></div><div class="twinkle" style="left: 204.936px; top: 308.107px; width: 12.895px; height: 12.895px; animation-duration: 3.29428s; animation-delay: 0.135134s;"></div><div class="twinkle" style="left: 140.724px; top: 603.5px; width: 12.1979px; height: 12.1979px; animation-duration: 3.485s; animation-delay: 0.199757s;"></div></div>
+        <!-- Portada -->
+    <section class="portada">
+        <!-- Fondo -->
+        <img src="assets/fondo-portada.png" alt="Portada Quinceañera" class="fondo-portada">
+        <!-- Mariposas -->
+        <img src="assets/MARIPOSA-IZQ.PNG" alt="Mariposa izquierda" class="mariposa izq">
+        <img src="assets/MARIPOSA-DER.PNG" alt="Mariposa derecha" class="mariposa der">
+        <!-- Texto -->
+        <div class="texto-portada">
+        <h1 class="shiny-text">Mis Quince</h1>
+        <h2 class="shiny-text">Madeline</h2>
+        <h3 class="shiny-text">Sofía</h3>
         </div>
-                <!--div cerezo-->
-                <div class="section-cerezo0"></div>  
+    </section>
+    <!-- Agradecimiento -->
+    <section class="agradecimiento">
+        <!-- Fondo -->
+        <img src="assets/fondo-agradecimiento.png" alt="Fondo agradecimiento" class="fondo-agradecimiento">
+        <!-- Mariposa central -->
+        <img src="assets/MARIPOSA-CENTRO.PNG" alt="Mariposa agradecimiento" class="mariposa-centro">
+
+        <!-- Texto de agradecimiento -->
+        <div class="texto-agradecimiento">
+            <p>Había una vez una bebé muy linda llamada</p>
+            <h2>Madeline Sofía</h2>
+            <p>
+              en cada primavera creció junto a las flores,  
+              y rodeada de amor fue aprendiendo y madurando,  
+              y finalmente está por llegar el día tan esperado.
+            </p>
+        </div>
+    </section>
+  
         <!-- Contador de Fecha Regresiva -->
-        <div class="section-countdown fade-in-element">
-            <h1>¡Están invitados!</h1>
+        <div class="section-countdown">
+                <!-- Fondo -->
+                <img src="assets/fondo-calendario.png" alt="Fondo countdown" class="fondo-countdown">
+
+            <img src="assets/MARIPOSA-IZQ.PNG" alt="Mariposa izquierda" class="mariposa izq-countdown">
+            <img src="assets/MARIPOSA-DER.PNG" alt="Mariposa derecha" class="mariposa der-countdown">
+            
+            <h1 class="shiny-text">¡Están invitados!</h1>
             <p>Nos encanta que sean parte de este momento tan especial para nosotros.</p>
-            <h2>08 . 11 . 2025</h2>
+            <h2 class="shiny-text">08 . 11 . 2025</h2>
             <div id="contador">
                 <div class="countdown-circle">
                     <span id="dias">00</span>
@@ -68,31 +96,56 @@
             <div class="section-calendar">
                 <a target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+Quince+Madeline+Sofia&dates=20251108T220000Z/20251109T060000Z&details=Celebración+de+los+15+a%C3%B1os+de+Madeline+Sofia&location=Ciudad+de+Guatemala&ctz=America%2FGuatemala">Agregar al calendario</a>
               </div>
+              
+              <div class="section-music visible">
+                <h2>"Fly to Your Heart - Selena Gómez"</h2>
+              <audio id="musica" controls="" loop="">
+                 <source src="/Fly to Your Heart.mp3" type="audio/mpeg">
+                 Tu navegador no soporta la reproducción de audio.
+              </audio>
+            </div>
+            
         </div>  
-        <div class="section-music fade-in-element visible">
-            <h2>"A Golden Childhood - Patrick Doyle"</h2>
-          <audio id="musica" controls="" loop="">
-             <source src="/A Golden Childhood - Patrick Doyle.mp3" type="audio/mpeg">
-             Tu navegador no soporta la reproducción de audio.
-          </audio>
-        </div>
-        <!--div cerezo-->
-        <div class="section-cerezo1"></div>  
-         <!-- Bendición de Padres -->
-         <div class="section-b fade-in-element">
-            <p>Nuestra amada  Madeline Sofia , hoy celebramos no solo tus 15 años, sino támbien la maravillosa persona en la que te has convertido. Que la vida te regale siempre razones para sonreír y que cada día estés rodeada del amor de quienes te queremos. Con todo nuestro cariño,</p>
-            <h1>Gustavo Adolfo Cividániz Estrada</h1>
-            <h2>&</h2>
-            <h3>Madeline María Méndez Gil</h3>
-        </div>
+
+        <!-- Bendición de Padres -->
+        <section   section class="bendicion">
+    <!-- Fondo -->
+    <img src="assets/fondo-papas.png" alt="Fondo bendición" class="fondo-bendicion">
+  
+    <!-- Texto -->
+    <div class="texto-bendicion">
+      <p>
+        Nuestra amada <span class="resaltado">Madeline Sofía</span>, hoy celebramos no solo tus 15 años,
+        sino también la maravillosa persona en la que te has convertido.  
+        Que la vida te regale siempre razones para sonreír y que cada día estés rodeada del amor de quienes te queremos.  
+        Con todo nuestro cariño,
+      </p>
+  
+      <h1>Gustavo Adolfo Cividániz Estrada</h1>
+      <h2>&</h2>
+      <h3>Madeline María Méndez Gil</h3>
+    </div>
+  </section>
+  
         <!-- Nombre de Invitados y Cantidad de Pases -->
-        <div class="section-guest fade-in-element">
-                            <h1>Los invitamos con mucho cariño</h1>
-                            <h2 id="nombreInvitado"></h2>
-                            <h3 id="cantidadPases"></h3>
-        </div>
+        <div class="section-guest">
+            <div class="guest-h1">
+              <h1>Los invitamos con mucho cariño</h1>
+              <img src="assets/MARIPOSA-IZQ.PNG" alt="Mariposa izquierda" class="mariposa-invitacion izq">
+            </div>
+          
+            <h2 id="nombreInvitado">Alan y Claudia</h2>
+          
+            <div class="guest-h3">
+              <h3 id="cantidadPases">Pases: 4</h3>
+              <img src="assets/MARIPOSA-DER.PNG" alt="Mariposa derecha" class="mariposa-invitacion der">
+            </div>
+          </div>
+          
+          
         <!-- Confirmación -->
-        <div class="section fade-in-element">
+        <div class="section">
+            <img src="assets/fondo-rsvp.png" alt="Fondo rsvp" class="fondo-rsvp">
             <h3>Confirmar Asistencia</h3>
                             <lord-icon
                               src="https://cdn.lordicon.com/unkasvor.json"
@@ -105,12 +158,11 @@
                             <p>Para nosotros es muy importante que confirmes tu asistencia lo antes posible, o bien indicarnos si no podrás acompañarnos.</p>
                             <button onclick="confirmarAsistencia()">Confirmar</button>
         </div> 
-        <!--div cerezo-->
-        <div class="section-cerezo000"></div>   
         <!-- Itinerario -->
-        <div class="section fade-in-element">
+        <div class="section">
+            <img src="assets/fondo-itinerario.png" alt="Fondo itinerario" class="fondo-itinerario">
           <!--card ceremonia-->
-            <div class="ceremony fade-in-element">
+            <div class="ceremony">
                 <lord-icon
                  src="https://cdn.lordicon.com/jqmftaai.json"
                  trigger="loop"
@@ -132,7 +184,7 @@
                </div>
             </div>
          <!--card fiesta-->
-           <div class="party fade-in-element">
+           <div class="party">
             <lord-icon
              src="https://cdn.lordicon.com/nsgykrsg.json"
              trigger="loop"
@@ -142,7 +194,7 @@
              style="width:200px;height:200px">
             </lord-icon>
            <h2>Recepción</h2>
-           <p>Raxanep, Cabaña el Salvador,</p>
+           <p>La cabaña de Raxanep</p>
            <div class="details">
             <div class="time-location">
                 <span class="date">08 Noviembre</span>
@@ -154,10 +206,8 @@
            </div>
            </div>
         </div>
-        <!--div cerezo-->
-        <div class="section-cerezo"></div>
-        <!-- Regalos -->
-        <div class="section-gifts fade-in-element">
+        <div class="section-gifts">
+            <img src="assets/fondo-lluviadesobres.png" alt="Fondo gifts" class="fondo-gifts">
             <lord-icon class="icon-gift"
             src="https://cdn.lordicon.com/kezeezyg.json"
             trigger="loop"
@@ -169,32 +219,28 @@
             <h2>Lluvia de Sobres</h2>
             <p>El mejor regalo es tu presencia, pero si deseas obsequiarme algo, un detalle en efectivo me ayudará a cumplir mis sueños.</p>
         </div>
-        <!--div cerezo-->
-        <div class="section-cerezo1"></div>   
-         <!--dresscode-->
-         <div class="section fade-in-element">
-            <h2>Dress Code</h2>
-            <lord-icon
-            src="https://cdn.lordicon.com/okgbpdra.json"
-            trigger="loop"
-            delay="2000"
-            stroke="light"
-            colors="primary:#b38fcc,secondary:#9273ab"
-            style="width:200px;height:200px">
-        </lord-icon>
-            <p>Formal y no olviden abrigarse, los colores lila y celeste están reservados completamente para la quinceañera</p>
-        </div>
-                <!--div cerezo-->
-        <div class="section-cerezo2"></div>   
+<!-- Dresscode -->
+<div class="section dresscode">
+    <img src="assets/fondo-dresscode.png" alt="Fondo dresscode" class="fondo-dresscode">
+    <div class="texto-dresscode">
+      <h2>Dress Code</h2>
+      <p>
+        Formal y no olviden abrigarse, los colores lila y celeste están reservados
+        completamente para la quinceañera
+      </p>
+    </div>
+  </div>
+  
         <!-- Buenos deseos -->
-        <section id="wishes-section" class="fade-in-element">
+        <section id="wishes-section" class="section-wishes">
+            <img src="assets/fondo-buenosdeseos.png" alt="Fondo deseos" class="fondo-deseos">
     <lord-icon
     src="https://cdn.lordicon.com/vgyuhnxn.json"
     trigger="loop"
     delay="2000"
     stroke="light"
     colors="primary:#b38fcc,secondary:#9273ab"
-    style="width:200px;height:200px">
+    style="width:200px;height:200px;margin-top:150px;">
 </lord-icon>
     <h2>Buenos Deseos</h2>
     <div id="wish-form">
@@ -212,12 +258,13 @@
   
         </section>
         <!-- frase final-->
-        <div class="section-quote fade-in-element">
+        <div class="section-quote">
+            <img src="assets/fondo-finalquote.png" alt="Fondo final" class="fondo-final">
             <h1>Te esperamos con alegría para celebrar este hermoso viaje hacia la vida, donde cada momento se convierte en un recuerdo inolvidable</h1>
         </div>
         <!-- Footer -->
         <footer>
-            <div class="section-social-icons fade-in-element">
+            <div class="section-social-icons">
                 <a href="https://www.facebook.com/thetwodesign" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/thetwodesign/" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/50236011737" target="_blank"><i class="fab fa-whatsapp"></i></a>
