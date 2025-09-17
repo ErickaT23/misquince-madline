@@ -1,5 +1,5 @@
     :root {
-        --color-1: DimGray;
+        --color-1: rgb(164, 111, 229);
         --color-2: #a78bfa;
         --font-text: "cormorant garamond", serif;
         --font-title: "Imperial Script", cursive;
@@ -227,22 +227,18 @@
   .texto-agradecimiento p {
     font-size: 25px;
     margin-bottom: 15px;
-    color: DimGray;
+    color: var(--color-1);
   }
   .texto-agradecimiento h2 {
     font-weight: 400;
     font-size: 60px;
     margin: 10px 0;
     padding: 10px;
-    /* Animación */ animation: shine 4s linear infinite;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
+    background: rgb(164, 111, 229);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-      0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
+    text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
 }
 .section-countdown {
     position: relative;
@@ -271,17 +267,13 @@
     font-weight: 400;
     font-style: italic;
     margin-top: -150px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
+    padding: 10px;
+    background: rgb(248 243 255);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-      0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-    padding: 10px;
-      /* Animación */
-  animation: shine 4s linear infinite;
+    text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
+    animation: shine 4s linear infinite;
 }
 .section-countdown p {
     margin: 0;
@@ -294,14 +286,6 @@
     margin-top: -45px;
 }
 .section-countdown h2{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-      0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
     padding: 10px;
       /* Animación */
   animation: shine 4s linear infinite;
@@ -311,16 +295,13 @@
     font-style: italic;
     padding: 5px;
     margin: 0;
-}
-.section-music h2{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
+    background: rgb(164, 111, 229);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-      0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
+    text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.section-music h2{
     padding: 10px;
       /* Animación */
   animation: shine 4s linear infinite;
@@ -330,6 +311,11 @@ font-weight: 400;
 font-style: italic;
 padding: 5px;
 margin: 0;
+background: rgb(139 56 255);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
 }
 #contador{
     display: flex;
@@ -354,7 +340,7 @@ margin: 0;
     color: white;
     font-weight: 400;
     padding: 0;
-    font-family: var(--font-1);
+    font-family: var(--font-text);
     font-style: italic;
 }
 .section-calendar{
@@ -438,7 +424,7 @@ margin: 0;
     font-family: var(--font-text);
     font-size: 23px;
     font-style: italic;
-    color: DimGray;
+    color:var(--color-1);
     padding: 10px;
     margin-top: 210px;
   }
@@ -447,29 +433,21 @@ margin: 0;
     font-family: var(--font-title);
     font-weight: 400;
     margin: 10px 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-      0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-      /* Animación */
+    background: rgb(139 56 255);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
   }
   .texto-bendicion h3 {
     font-family: var(--font-title);
     font-weight: 400;
     margin: 10px 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-      0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-      /* Animación */
+    background: rgb(139 56 255);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
   }
   .texto-bendicion h1, .texto-bendicion h3 {
     font-size: 50px;
@@ -481,16 +459,13 @@ margin: 0;
     }
   /* Resaltado del nombre */
   .texto-bendicion .resaltado {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Sombras para contraste sobre lila */
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */ 0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-      /* Animación */
   animation: shine 4s linear infinite;
   font-size: 27px;
+  background: rgb(139 56 255);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
   }
   
   /* Animación de brillo metálico */
@@ -543,24 +518,22 @@ margin: 0;
         display: inline-block;
         margin: 20px 0;
       }
-      
       .mariposa-invitacion {
         position: absolute;
-        width: 130px;
-        top: 40%;
+        width: 110px;
+        top: 45%;
         transform: translateY(-50%);
         animation: vuelo 6s ease-in-out infinite;
         pointer-events: none;
       }
-      
       .mariposa-invitacion.izq { left: -10px; }
-      .mariposa-invitacion.der { right: -120px; }
+      .mariposa-invitacion.der { right: -80px; }
       
       .section-guest h1, 
       .section-guest h2, 
       .section-guest h3 {
         font-family: var(--font-title);
-        font-size: 30px;
+        font-size: 50px;
         margin: 10px 0;
         background: linear-gradient(90deg, #fff, #d1d1d1, #faf2ff);
         -webkit-background-clip: text;
@@ -599,20 +572,20 @@ margin: 0;
         padding: 15px;
         font-weight: 400;
         font-style: italic;
-        font-size: 35px;
+        font-size: 40px;
         margin-top: -10px;
         margin-bottom: -10px;
         padding: 20px;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        /* Sombras para contraste sobre lila */
-        text-shadow: 
-          2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-          0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-          /* Animación */
       animation: shine 4s linear infinite;
+      background: rgb(139 56 255);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
+      margin-bottom: -10px;
+          margin-top: -35px;
+          padding: 5px;
+          font-weight: 400;
     }
     .section-main h2 {
         top: 18%;
@@ -621,7 +594,7 @@ margin: 0;
     .section-guest h1{
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         font-family: var(--font-title);
-        font-size: 45px;
+        font-size: 50px;
         font-weight: 400;
         font-style: italic;
         padding: 30px;
@@ -635,7 +608,7 @@ margin: 0;
         color: white;                  /* morado fuerte para contraste */
         padding: 20px 20px;
         font-family: var(--font-title);
-        font-size: 40px;
+        font-size: 55px;
         font-weight: 400;
         margin-top: -5px;
     }
@@ -645,7 +618,7 @@ margin: 0;
         color: white;                  /* morado fuerte para contraste */
         padding: 20px 20px;
         font-family: var(--font-title);
-        font-size: 35px;    
+        font-size: 50px;    
         margin-top: -50px;
         font-weight: 400;
     }
@@ -689,19 +662,22 @@ margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 8px rgba(255, 255, 255, 0.3);
     animation: shine 4s linear infinite;
   }
-  .section h2 {
+  .section h2, .section-gifts h2{
     font-family: var(--font-title);
     font-size: 50px;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 8px rgba(255, 255, 255, 0.3);
     animation: shine 4s linear infinite;
+    background: rgb(139 56 255);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
+margin-bottom: -10px;
+    margin-top: -35px;
+    padding: 5px;
+    font-weight: 400;
   }
   .texto-dresscode p {
-    font-family: var(--font-1);
+    font-family: var(--font-text);
     font-style: italic;
     font-weight: 400;
     font-size: 22px;
@@ -711,7 +687,7 @@ margin: 0;
     margin-top: -20px;
   }
   .section p {
-    font-family: var(--font-1);
+    font-family: var(--font-text);
     font-style: italic;
     font-weight: 400;
     font-size: 22px;
@@ -719,7 +695,7 @@ margin: 0;
     margin: 0;
     color: var(--color-1);
   }
-    .section-gifts h2, .section h3{
+.section h3{
         font-family: var(--font-title);
         padding: 15px;
         font-weight: 400;
@@ -727,19 +703,16 @@ margin: 0;
         font-size: 50px;
         margin-top: -10px;
         margin-bottom: -10px;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        /* Sombras para contraste sobre lila */
-        text-shadow: 
-          2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-          0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-          /* Animación */
       animation: shine 4s linear infinite;
+      background: rgb(248 243 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
+    animation: shine 4s linear infinite;
     }
     .section-gifts p{
-        font-family: var(--font-1);
+        font-family: var(--font-text);
         font-style: italic;
         font-weight: 400;
         font-size: 22px;
@@ -748,7 +721,7 @@ margin: 0;
         color: var(--color-1);
     }
     .section span{
-        font-family: var(--font-1);
+        font-family: var(--font-text);
         font-style: normal;
         font-weight: 400;
         font-size: 1.2em;
@@ -767,7 +740,7 @@ margin: 0;
     }
     button {
         border-radius: 5px;
-        font-family: var(--font-1);
+        font-family: var(--font-text);
         padding: 10px;
         border: none;
         font-size: 1em;
@@ -893,7 +866,7 @@ margin: 0;
         }
     }
     #wishes-section {
-        font-family: var(--font-1);
+        font-family: var(--font-text);
     }
     
     #wishes-section h2 {
@@ -904,16 +877,15 @@ margin: 0;
         font-size: 50px;
         margin-top: -10px;
         margin-bottom: -10px;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
+        background: rgb(139 56 255);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
-        /* Sombras para contraste sobre lila */
-        text-shadow: 
-          2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-          0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-          /* Animación */
-      animation: shine 4s linear infinite;
+        text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
+        margin-bottom: -10px;
+            margin-top: -35px;
+            padding: 5px;
+            font-weight: 400;
     }
     
     #wishes-container {
@@ -935,7 +907,7 @@ margin: 0;
         width: 90%;
         margin: 10px 0;
         padding: 10px;
-        font-family: var(--font-1);
+        font-family: var(--font-text);
         font-style: italic;
         border-radius: 8px;
         border: 1px solid #ccc;
@@ -983,25 +955,7 @@ margin: 0;
         object-fit: cover;
         z-index: -1;
       }
-      
-      .section-quote h1 {
-        font-family: var(--font-title);
-        font-size: 40px;   /* más pequeño en móvil */
-        line-height: 1.5;
-        max-width: 700px;
-        margin: 0 auto;
-        font-style: italic;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.216), rgb(0 0 0 / 39%), rgba(0, 0, 0, 0.216));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        /* Sombras para contraste sobre lila */
-        text-shadow: 
-          2px 2px 4px rgba(0,0,0,0.2),   /* sombra fuerte negra */
-          0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
-          /* Animación */
-      animation: shine 4s linear infinite;
-      }
+
 /* Contenedor */
 #twinkles {
     position: fixed;
@@ -1091,5 +1045,5 @@ margin: 0;
     animation: shine-move 4s linear infinite;
     font-style: italic; /* opcional, si querés mantener elegancia */
   }
-        
+
       
