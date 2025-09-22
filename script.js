@@ -156,13 +156,13 @@ function confirmarAsistencia() {
 //iglesia
 // Iglesia
 function elegirAplicacion() {
-  const enlaceMaps = 'https://maps.app.goo.gl/6wE5BZMJ99LJWKTp7';
+  const enlaceMaps = 'https://maps.app.goo.gl/Kz4ssVx6yP6AEW1H6';
   window.open(enlaceMaps, '_blank');
 }
 
 // Fiesta
 function elegirAplicacionOtraDireccion() {
-  const enlaceMaps = 'https://maps.app.goo.gl/yJdjujNgCxWsoJd36';
+  const enlaceMaps = 'https://maps.app.goo.gl/2weAdNve1fqtiadz5';
   window.open(enlaceMaps, '_blank');
 }
 
