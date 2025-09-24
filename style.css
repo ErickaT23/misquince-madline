@@ -145,16 +145,13 @@
     padding: 0;
     margin: 0;               /* eliminamos márgenes que separan demasiado */
     line-height: 1;        /* reduce espacio entre líneas */
-    /* Plateado más fuerte y contrastante */
-  background: linear-gradient(90deg, #ffffff, #faf2ff, #d1d1d1, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  /* Sombras para contraste sobre lila */
-  text-shadow: 
-    2px 2px 4px rgba(0,0,0,0.7),   /* sombra fuerte negra */
-    0 0 8px rgba(255,255,255,0.3); /* halo suave para efecto metálico */
     animation: shine 4s linear infinite;
+    background: rgb(115 0 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 2px 2px 4px #7240915e, 0 0 8px rgba(255, 255, 255, 0.6);
+    padding: 10px;
 }
   /* Tamaños diferentes */
   .texto-portada {
@@ -216,18 +213,23 @@
   .texto-agradecimiento {
     z-index: 2;
   }
-  .texto-agradecimiento p,
   .texto-agradecimiento h2 {
     font-family: var(--font-title);
     font-style: italic;
     margin: 0;
     line-height: 0.9;
+  }  
+  .texto-agradecimiento p{
+    font-family: var(--font-text);
+    font-style: italic;
+    margin: 0;
   }
   /* Diferencia de tamaños */
   .texto-agradecimiento p {
-    font-size: 25px;
+    font-size: 21px;
     margin-bottom: 15px;
     color: var(--color-1);
+    padding: 5px;
   }
   .texto-agradecimiento h2 {
     font-weight: 400;
@@ -568,11 +570,11 @@ text-shadow: 2px 2px 4px #9c02fc4d, 0 0 8px rgba(255, 255, 255, 0.6);
         animation: fadeIn var(--scroll-animation-duration) ease-in forwards;
     }
     .section-quote h1 {
-        font-family: var(--font-title);
+        font-family: var(--font-text);
         padding: 15px;
         font-weight: 400;
         font-style: italic;
-        font-size: 40px;
+        font-size: 30px;
         margin-top: -10px;
         margin-bottom: -10px;
         padding: 20px;
