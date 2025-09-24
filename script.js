@@ -34,46 +34,47 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función para obtener datos de invitados (sin inputs)
 // Carga datos de invitado desde invitados.json según ?id=123
 async function cargarDatosInvitado() {
-    const params = new URLSearchParams(window.location.search);
-    const invitadoId = params.get('id');
-    if (!invitadoId) {
-      console.warn('ID de invitado no encontrado en el enlace.');
-      return;
-    }
-  
-    try {
-      // Ajusta la ruta si tu index no está en la raíz
-      const res = await fetch('invitados.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-  
-      const invitados = await res.json();
-      const invitado = invitados[invitadoId] || null;
-  
-      const nombreEl = document.getElementById('nombreInvitado');
-      const pasesEl  = document.getElementById('cantidadPases');
-  
-      // Nombre (ocultar si no hay)
-      if (invitado?.nombre && invitado.nombre.toLowerCase() !== 'sin nombre') {
-        nombreEl.innerText = invitado.nombre;
-        nombreEl.style.display = '';
-      } else {
-        nombreEl.style.display = 'none';
-      }
-  
-      // Pases (ocultar si no hay número)
-      if (Number.isFinite(invitado?.pases)) {
-        pasesEl.innerText = `Pases: ${invitado.pases}`;
-        pasesEl.style.display = '';
-      } else {
-        pasesEl.style.display = 'none';
-      }
-  
-      // Guarda en memoria por si lo necesitas en otras funciones
-      window.__invitadoActual = invitado;
-    } catch (e) {
-      console.error('No se pudo cargar invitados.json', e);
-    }
+  const params = new URLSearchParams(window.location.search);
+  const invitadoId = params.get('id');
+  if (!invitadoId) {
+    console.warn('ID de invitado no encontrado en el enlace.');
+    return;
   }
+
+  try {
+    const res = await fetch('invitados.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+
+    const invitados = await res.json();
+    const invitado = invitados[invitadoId] || null;
+
+    const nombreEl = document.getElementById('nombreInvitado');
+    const pasesEl  = document.getElementById('cantidadPases');
+
+    // Nombre con adjetivo (ocultar si no hay)
+    if (invitado?.nombre && invitado.nombre.toLowerCase() !== 'sin nombre') {
+      const adjetivo = invitado?.adjetivo ? invitado.adjetivo + " " : "";
+      nombreEl.innerText = adjetivo + invitado.nombre;
+      nombreEl.style.display = '';
+    } else {
+      nombreEl.style.display = 'none';
+    }
+
+    // Pases (ocultar si no hay número)
+    if (Number.isFinite(invitado?.pases)) {
+      pasesEl.innerText = `Pases: ${invitado.pases}`;
+      pasesEl.style.display = '';
+    } else {
+      pasesEl.style.display = 'none';
+    }
+
+    // Guarda en memoria por si lo necesitas en otras funciones
+    window.__invitadoActual = invitado;
+  } catch (e) {
+    console.error('No se pudo cargar invitados.json', e);
+  }
+}
+
   
 
 // Función para iniciar el contador de la fecha del evento
