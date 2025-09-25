@@ -48,19 +48,27 @@ async function cargarDatosInvitado() {
     const invitados = await res.json();
     const invitado = invitados[invitadoId] || null;
 
-    const nombreEl = document.getElementById('nombreInvitado');
-    const pasesEl  = document.getElementById('cantidadPases');
+    const adjetivoEl = document.getElementById('adjetivoInvitado');
+    const nombreEl   = document.getElementById('nombreInvitado');
+    const pasesEl    = document.getElementById('cantidadPases');
 
-    // Nombre con adjetivo (ocultar si no hay)
+    // Adjetivo
+    if (invitado?.adjetivo) {
+      adjetivoEl.innerText = invitado.adjetivo;
+      adjetivoEl.style.display = '';
+    } else {
+      adjetivoEl.style.display = 'none';
+    }
+
+    // Nombre
     if (invitado?.nombre && invitado.nombre.toLowerCase() !== 'sin nombre') {
-      const adjetivo = invitado?.adjetivo ? invitado.adjetivo + " " : "";
-      nombreEl.innerText = adjetivo + invitado.nombre;
+      nombreEl.innerText = invitado.nombre;
       nombreEl.style.display = '';
     } else {
       nombreEl.style.display = 'none';
     }
 
-    // Pases (ocultar si no hay número)
+    // Pases
     if (Number.isFinite(invitado?.pases)) {
       pasesEl.innerText = `Pases: ${invitado.pases}`;
       pasesEl.style.display = '';
@@ -70,6 +78,7 @@ async function cargarDatosInvitado() {
 
     // Guarda en memoria por si lo necesitas en otras funciones
     window.__invitadoActual = invitado;
+
   } catch (e) {
     console.error('No se pudo cargar invitados.json', e);
   }
