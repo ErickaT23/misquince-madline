@@ -155,12 +155,101 @@ function closeModal(event) {
     });
 
 // Link directo (puede ser el corto o el largo)
-const GF_BASE = "https://forms.gle/Yv2J5HgAFUi495dW6";
+// ====== CONFIG ======
+// ====== CONFIG ======
+const FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLSd2zuHv8HFUX7vUIpW-DBPs8BR71ApcKycxwfFe6fc60iqAkA/viewform?usp=pp_url";
 
-// Confirmación → abre el formulario en nueva pestaña
-function confirmarAsistencia() {
-  window.open(GF_BASE, '_blank');
+// IDs reales de los campos del form
+const ENTRY_NOMBRE = "entry.1297710131"; // Nombre del Invitado
+const ENTRY_PASES  = "entry.1186503146"; // Número de Pases
+
+// ====== UTIL ======
+function getQueryId() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('id');
 }
+
+async function getInvitadoById(id) {
+  if (!id) return null;
+  try {
+    const res = await fetch('invitados.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    return data[id] || null;
+  } catch (e) {
+    console.error('Error cargando invitados.json', e);
+    return null;
+  }
+}
+
+function buildNombreCompleto(inv) {
+  const adj = inv?.adjetivo ? inv.adjetivo + " " : "";
+  return (adj + (inv?.nombre || "")).trim();
+}
+
+function buildPrefillUrl(nombre, pases) {
+  // Asegurar que el nombre esté en texto plano (sin %20 ni '+')
+  let plano = String(nombre || "");
+  if (plano.includes('%') || plano.includes('+')) {
+    try {
+      plano = decodeURIComponent(plano.replace(/\+/g, ' '));
+    } catch {
+      plano = plano.replace(/\+/g, ' ').replace(/%20/gi, ' ');
+    }
+  }
+
+  const u = new URL(FORM_BASE); // ...usp=pp_url
+  if (plano) u.searchParams.set(ENTRY_NOMBRE, plano);        // sin encode extra
+  if (pases !== undefined && pases !== null && String(pases) !== "") {
+    u.searchParams.set(ENTRY_PASES, String(pases));
+  }
+  return u.toString();
+}
+
+// ====== ACCIÓN DEL BOTÓN ======
+async function confirmarAsistencia() {
+  const id = getQueryId();
+  const invitado = await getInvitadoById(id);
+
+  if (!invitado) {
+    window.open(FORM_BASE, '_blank'); // form en blanco si no hay id válido
+    return;
+  }
+
+  const nombre = buildNombreCompleto(invitado);
+  const pases  = invitado.pases ?? "";
+
+  const url = buildPrefillUrl(nombre, pases);
+  console.log("Prefill URL generado:", url);
+  window.open(url, '_blank');
+}
+
+
+
+
+
+// ====== ACCIÓN DEL BOTÓN ======
+async function confirmarAsistencia() {
+  const id = getQueryId();
+  const invitado = await getInvitadoById(id);
+
+  if (!invitado) {
+    // Si no hay invitado (o no hay id), abre el form en blanco
+    window.open(FORM_BASE, '_blank');
+    return;
+  }
+
+  const nombre = buildNombreCompleto(invitado);
+  const pases  = invitado.pases ?? '';
+
+  const prefilled = buildPrefillUrl(encodeURIComponent(nombre), pases);
+  // Nota: encodeURIComponent arriba es por seguridad; URLSearchParams también codifica.
+  // Si ya usas URLSearchParams, podrías pasar `nombre` sin encode extra:
+  // const prefilled = buildPrefillUrl(nombre, pases);
+
+  window.open(prefilled, '_blank');
+}
+
 
 //Funcion para abrir Maps o maps
 //iglesia
