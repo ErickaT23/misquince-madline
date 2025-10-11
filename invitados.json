@@ -98,7 +98,11 @@
   "97": { "adjetivo": "Familia", "nombre": "Lara Elias", "pases": 4 },
   "98": { "adjetivo": "Lic", "nombre": "Fredy Ogaldez", "pases": 2 },
   "99": { "adjetivo": "Familia", "nombre": "De López", "pases": 3 },
-  "100": { "adjetivo": "Familia", "nombre": "Urizar de León", "pases": 6 }
+  "100": { "adjetivo": "Familia", "nombre": "Urizar de León", "pases": 6 },
+  "101": { "adjetivo": "Familia", "nombre": "Lopez Montufar", "pases": 2 },
+  "102": { "adjetivo": "Familia", "nombre": "Giron Cabrera", "pases": 4 },
+  "103": { "adjetivo": "Familia", "nombre": "Urizar Vasquez", "pases": 4 },
+  "104": { "adjetivo": "Familia", "nombre": "Tol Natareno", "pases": 2 }
 
 
 }
