@@ -102,7 +102,21 @@
   "101": { "adjetivo": "Familia", "nombre": "Lopez Montufar", "pases": 2 },
   "102": { "adjetivo": "Familia", "nombre": "Giron Cabrera", "pases": 4 },
   "103": { "adjetivo": "Familia", "nombre": "Urizar Vasquez", "pases": 4 },
-  "104": { "adjetivo": "Familia", "nombre": "Tol Natareno", "pases": 2 }
+  "104": { "adjetivo": "Familia", "nombre": "Tol Natareno", "pases": 2 },
+  "105": { "adjetivo": "Familia", "nombre": "Giron Cabrera", "pases": 4 },
+  "106": { "adjetivo": "Familia", "nombre": "Urizar Vasquez", "pases": 4 },
+  "107": { "adjetivo": "Familia", "nombre": "Figueroa Rodriguez", "pases": 1 },
+  "108": { "adjetivo": "", "nombre": "Irma Cruz", "pases": 1 },
+  "109": { "adjetivo": "Familia", "nombre": "De León Cruz", "pases": 2 },
+  "110": { "adjetivo": "Familia", "nombre": "Alberto de León Cruz", "pases": 4 },
+  "111": { "adjetivo": "Familia", "nombre": "Leticia de León Cruz", "pases": 4 },
+  "112": { "adjetivo": "", "nombre": "Dailyn de León", "pases": 4 },
+  "113": { "adjetivo": "", "nombre": "Paco Mendez", "pases": 1 },
+  "114": { "adjetivo": "Familia", "nombre": "Giron Dardon", "pases": 6 },
+  "115": { "adjetivo": "Familia", "nombre": "Lopez Estrada", "pases": 2 },
+  "116": { "adjetivo": "Familia", "nombre": "Gil Ramos", "pases": 3 },
+  "117": { "adjetivo": "", "nombre": "Yadira de León", "pases": 3 }
+
 
 
 }
