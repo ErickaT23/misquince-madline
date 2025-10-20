@@ -105,7 +105,7 @@
   "104": { "adjetivo": "Familia", "nombre": "Tol Natareno", "pases": 2 },
   "105": { "adjetivo": "Familia", "nombre": "Giron Cabrera", "pases": 4 },
   "106": { "adjetivo": "Familia", "nombre": "Urizar Vasquez", "pases": 4 },
-  "107": { "adjetivo": "Familia", "nombre": "Figueroa Rodriguez", "pases": 1 },
+  "107": { "adjetivo": "Familia", "nombre": "Figueroa Rodriguez", "pases": 6 },
   "108": { "adjetivo": "", "nombre": "Irma Cruz", "pases": 1 },
   "109": { "adjetivo": "Familia", "nombre": "De León Cruz", "pases": 2 },
   "110": { "adjetivo": "Familia", "nombre": "Alberto de León Cruz", "pases": 4 },
@@ -115,7 +115,13 @@
   "114": { "adjetivo": "Familia", "nombre": "Giron Dardon", "pases": 6 },
   "115": { "adjetivo": "Familia", "nombre": "Lopez Estrada", "pases": 2 },
   "116": { "adjetivo": "Familia", "nombre": "Gil Ramos", "pases": 3 },
-  "117": { "adjetivo": "", "nombre": "Yadira de León", "pases": 3 }
+  "117": { "adjetivo": "", "nombre": "Yadira de León", "pases": 3 },
+  "118": { "adjetivo": "Familia", "nombre": "Ramos Estrada", "pases": 4 },
+"119": { "adjetivo": "Familia", "nombre": "Ramos Estrada", "pases": 4 },
+"120": { "adjetivo": "Familia", "nombre": "Córdoba Quiroa", "pases": 4 },
+"121": { "adjetivo": "Familia", "nombre": "Girón Cordón", "pases": 4 },
+"122": { "adjetivo": "Familia", "nombre": "Giron Cordón", "pases": 4 }
+
 
 
 
